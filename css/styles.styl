@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+
+headerCol = #7986CB
+mainCol = #3D5AFE
+textCol = white
+buttonCol = blue
+
+body
+  background-color: mainCol
+
+.wrapper
+  lost-utility clearfix
+  height 100vh
+  min-width: 450px
+  font-family: 'Slabo 27px', serif;
+  color textCol
+
+p
+ margin 0
+
+.wrapper > div:nth-child(1)
+  lost-row 1/4
+  background-color: headerCol
+  lost-align center
+  font-size responsive 2rem 5rem
+  text-align: center;
+  text-wrap none
+
+.wrapper > div:nth-child(2)
+  lost-row 2/4
+  background-color: grey
+
+.wrapper > div:nth-child(3)
+  lost-row 1/4
+  background-color: headerCol
+
+.main
+  lost-utility clearfix
+
+.main > div
+  background-color: mainCol
+  lost-align: center;
+  text-align: center;
+
+.main > div:nth-child(1)
+  lost-row 3/7 0
+  font-size responsive 1.5rem 2.5rem
+
+.main > div:nth-child(2)
+  lost-row 1/7 0
+  font-size responsive 1.5rem 2rem
+
+.main > div:nth-child(3)
+  lost-row 3/7 0
+
+#quoteText, #quoteAuthor
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+
+#newQuoteButton
+  width: 80px
+  height 80px
+  border-radius: 40px
+  outline none
+  border none
+  background-color buttonCol
+  color: textCol
+  font-size responsive 1.5rem 2rem
+
+@keyframes fader {
+    from {opacity: 0}
+    to {opacity: 1}
+}

@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css?family=Slabo+27px");
+body {
+  background-color: #3d5afe;
+}
+.wrapper {
+  *zoom: 1;
+  height: 100vh;
+  min-width: 450px;
+  font-family: 'Slabo 27px', serif;
+  color: #fff;
+}
+.wrapper:before{
+  content: '';
+  display: table;
+}
+.wrapper:after{
+  content: '';
+  display: table;
+  clear: both;
+}
+p {
+  margin: 0;
+}
+.wrapper > div:nth-child(1) {
+  width: 100%;
+  height: calc(99.99% * 1/4 - (30px - 30px * 1/4));
+  margin-bottom: 30px;
+  background-color: #7986cb;
+  position: relative;
+  font-size: calc(2rem + 3 * ((100vw - 26.25rem) / 53.75));
+  text-align: center;
+  text-wrap: none;
+}
+@media screen and (min-width: 1280px){
+  .wrapper > div:nth-child(1){
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 420px){
+  .wrapper > div:nth-child(1){
+    font-size: 2rem;
+  }
+}
+.wrapper > div:nth-child(1):last-child{
+  margin-bottom: 0;
+}
+.wrapper > div:nth-child(1) > *{
+  position: absolute;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrapper > div:nth-child(2) {
+  width: 100%;
+  height: calc(99.99% * 2/4 - (30px - 30px * 2/4));
+  margin-bottom: 30px;
+  background-color: #808080;
+}
+.wrapper > div:nth-child(2):last-child{
+  margin-bottom: 0;
+}
+.wrapper > div:nth-child(3) {
+  width: 100%;
+  height: calc(99.99% * 1/4 - (30px - 30px * 1/4));
+  margin-bottom: 30px;
+  background-color: #7986cb;
+}
+.wrapper > div:nth-child(3):last-child{
+  margin-bottom: 0;
+}
+.main {
+  *zoom: 1;
+}
+.main:before{
+  content: '';
+  display: table;
+}
+.main:after{
+  content: '';
+  display: table;
+  clear: both;
+}
+.main > div {
+  background-color: #3d5afe;
+  position: relative;
+  text-align: center;
+}
+.main > div > *{
+  position: absolute;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main > div:nth-child(1) {
+  width: 100%;
+  height: calc(99.999999% * 3/7);
+  margin-bottom: 0;
+  font-size: calc(1.5rem + 1 * ((100vw - 26.25rem) / 53.75));
+}
+@media screen and (min-width: 1280px){
+  .main > div:nth-child(1){
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 420px){
+  .main > div:nth-child(1){
+    font-size: 1.5rem;
+  }
+}
+.main > div:nth-child(1):last-child{
+  margin-bottom: 0;
+}
+.main > div:nth-child(2) {
+  width: 100%;
+  height: calc(99.999999% * 1/7);
+  margin-bottom: 0;
+  font-size: calc(1.5rem + 0.5 * ((100vw - 26.25rem) / 53.75));
+}
+@media screen and (min-width: 1280px){
+  .main > div:nth-child(2){
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 420px){
+  .main > div:nth-child(2){
+    font-size: 1.5rem;
+  }
+}
+.main > div:nth-child(2):last-child{
+  margin-bottom: 0;
+}
+.main > div:nth-child(3) {
+  width: 100%;
+  height: calc(99.999999% * 3/7);
+  margin-bottom: 0;
+}
+.main > div:nth-child(3):last-child{
+  margin-bottom: 0;
+}
+#quoteText,
+#quoteAuthor {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+#newQuoteButton {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  outline: none;
+  border: none;
+  background-color: #00f;
+  color: #fff;
+  font-size: calc(1.5rem + 0.5 * ((100vw - 26.25rem) / 53.75));
+}
+@media screen and (min-width: 1280px){
+  #newQuoteButton{
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 420px){
+  #newQuoteButton{
+    font-size: 1.5rem;
+  }
+}
+@-webkit-keyframes fader {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fader {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
