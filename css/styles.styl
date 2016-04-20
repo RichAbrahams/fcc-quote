@@ -51,10 +51,12 @@ body
 #quoteText, #quoteAuthor
   animation-duration: 2s;
   animation-iteration-count: 1;
+  animation-timing-function: linear;
 
 @keyframes fader {
-    from {opacity: 0}
-    to {opacity: 1}
+    0% {opacity: 0}
+    50% {opacity: 0.5}
+    100% {opacity: 1}  
 }
 
 #newQuoteButton
@@ -75,6 +77,7 @@ body
   animation-name: changeColor
   animation-duration: 2s
   animation-iteration-count: 1
+  animation-timing-function: linear;
 
 @keyframes changeColor {
   0% {border 3px solid buttonText; color: buttonText}
