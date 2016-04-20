@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Slabo+27px");
 body {
-  background-color: #3d5afe;
+  background-color: #fff;
 }
 .wrapper {
   *zoom: 1;
   height: 100vh;
-  min-width: 450px;
+  min-width: 600px;
   font-family: 'Slabo 27px', serif;
-  color: #fff;
+  color: #0092ff;
 }
 .wrapper:before{
   content: '';
@@ -23,9 +23,9 @@ p {
 }
 .wrapper > div:nth-child(1) {
   width: 100%;
-  height: calc(99.99% * 1/4 - (30px - 30px * 1/4));
+  height: calc(99.99% * 3/12 - (30px - 30px * 3/12));
   margin-bottom: 30px;
-  background-color: #7986cb;
+  background-color: #fff;
   position: relative;
   font-size: calc(2rem + 3 * ((100vw - 26.25rem) / 53.75));
   text-align: center;
@@ -54,7 +54,7 @@ p {
 }
 .wrapper > div:nth-child(2) {
   width: 100%;
-  height: calc(99.99% * 2/4 - (30px - 30px * 2/4));
+  height: calc(99.99% * 6/12 - (30px - 30px * 6/12));
   margin-bottom: 30px;
   background-color: #808080;
 }
@@ -63,9 +63,9 @@ p {
 }
 .wrapper > div:nth-child(3) {
   width: 100%;
-  height: calc(99.99% * 1/4 - (30px - 30px * 1/4));
+  height: calc(99.99% * 3/12 - (30px - 30px * 3/12));
   margin-bottom: 30px;
-  background-color: #7986cb;
+  background-color: #fff;
 }
 .wrapper > div:nth-child(3):last-child{
   margin-bottom: 0;
@@ -83,7 +83,7 @@ p {
   clear: both;
 }
 .main > div {
-  background-color: #3d5afe;
+  background-color: #fff;
   position: relative;
   text-align: center;
 }
@@ -99,11 +99,11 @@ p {
   width: 100%;
   height: calc(99.999999% * 3/7);
   margin-bottom: 0;
-  font-size: calc(1.5rem + 1 * ((100vw - 26.25rem) / 53.75));
+  font-size: calc(1.5rem + 0.5 * ((100vw - 26.25rem) / 53.75));
 }
 @media screen and (min-width: 1280px){
   .main > div:nth-child(1){
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 @media screen and (max-width: 420px){
@@ -149,13 +149,13 @@ p {
           animation-iteration-count: 1;
 }
 #newQuoteButton {
-  width: 80px;
-  height: 80px;
-  border-radius: 40px;
+  width: 90px;
+  height: 90px;
+  border-radius: 45px;
   outline: none;
-  border: none;
-  background-color: #00f;
-  color: #fff;
+  border: 3px solid #0092ff;
+  background-color: #fff;
+  color: #0092ff;
   font-size: calc(1.5rem + 0.5 * ((100vw - 26.25rem) / 53.75));
 }
 @media screen and (min-width: 1280px){
