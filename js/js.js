@@ -29,7 +29,13 @@ $(document).ready(function(){
       });
   }
 
-changeQuoteButton.addEventListener('click', getQuote, false);
+changeQuoteButton.addEventListener('click', function(){
+  $(changeQuoteButton).toggleClass("buttonColChange");
+  setTimeout(function () {
+    $(changeQuoteButton).toggleClass("buttonColChange");
+  }, 2200);
+  getQuote();
+}, false);
 
 getQuote();
 

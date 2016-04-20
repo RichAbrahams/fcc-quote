@@ -6,57 +6,56 @@ textCol = #0092ff
 buttonCol = white
 buttonText = #0092ff
 
+*
+  padding 0
+  margin 0
+
 body
   background-color: mainCol
 
 .wrapper
   lost-utility clearfix
-  height 100vh
-  min-width: 600px
+  max-width: 100vh
   font-family: 'Slabo 27px', serif;
   color textCol
+  margin auto
 
-p
- margin 0
-
-.wrapper > div:nth-child(1)
-  lost-row 3/12
-  background-color: headerCol
+.header
+  width: 100%
+  height 200px
   lost-align center
-  font-size responsive 2rem 5rem
-  text-align: center;
-  text-wrap none
 
-.wrapper > div:nth-child(2)
-  lost-row 6/12
-  background-color: grey
-
-.wrapper > div:nth-child(3)
-  lost-row 3/12
-  background-color: headerCol
+#svglogo
+  width 400px
+  height auto
+  +below(600px)
+    width: 80%
 
 .main
-  lost-utility clearfix
-
-.main > div
-  background-color: mainCol
-  lost-align: center;
+  max-width: 100vh
+  padding 10%
   text-align: center;
 
-.main > div:nth-child(1)
-  lost-row 3/7 0
-  font-size responsive 1.5rem 2rem
+.textContainer
+  height: 175px
+  +above(900px)
+    height 250px
 
-.main > div:nth-child(2)
-  lost-row 1/7 0
-  font-size responsive 1.5rem 2rem
+.quoteTextBox
+  font-size: responsive 1rem 2rem
 
-.main > div:nth-child(3)
-  lost-row 3/7 0
+.quoteAuthorBox
+  padding-top 2rem
+  font-size: responsive 1rem 1.5rem
 
 #quoteText, #quoteAuthor
   animation-duration: 2s;
   animation-iteration-count: 1;
+
+@keyframes fader {
+    from {opacity: 0}
+    to {opacity: 1}
+}
 
 #newQuoteButton
   width: 90px
@@ -66,9 +65,19 @@ p
   border 3px solid buttonText
   background-color buttonCol
   color: buttonText
-  font-size responsive 1.5rem 2rem
+  font-size responsive 1rem 1.5rem
+  +below(600px)
+    width 60px
+    height 60px
+    border-radius: 30px
 
-@keyframes fader {
-    from {opacity: 0}
-    to {opacity: 1}
+.buttonColChange
+  animation-name: changeColor
+  animation-duration: 2s
+  animation-iteration-count: 1
+
+@keyframes changeColor {
+  0% {border 3px solid buttonText; color: buttonText}
+  50% {border 3px solid #FF6D00; color: #FF6D00}
+  100% {border 3px solid buttonText; color: buttonText}
 }

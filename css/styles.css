@@ -1,13 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Slabo+27px");
+* {
+  padding: 0;
+  margin: 0;
+}
 body {
   background-color: #fff;
 }
 .wrapper {
   *zoom: 1;
-  height: 100vh;
-  min-width: 600px;
+  max-width: 100vh;
   font-family: 'Slabo 27px', serif;
   color: #0092ff;
+  margin: auto;
 }
 .wrapper:before{
   content: '';
@@ -18,33 +22,12 @@ body {
   display: table;
   clear: both;
 }
-p {
-  margin: 0;
-}
-.wrapper > div:nth-child(1) {
+.header {
   width: 100%;
-  height: calc(99.99% * 3/12 - (30px - 30px * 3/12));
-  margin-bottom: 30px;
-  background-color: #fff;
+  height: 200px;
   position: relative;
-  font-size: calc(2rem + 3 * ((100vw - 26.25rem) / 53.75));
-  text-align: center;
-  text-wrap: none;
 }
-@media screen and (min-width: 1280px){
-  .wrapper > div:nth-child(1){
-    font-size: 5rem;
-  }
-}
-@media screen and (max-width: 420px){
-  .wrapper > div:nth-child(1){
-    font-size: 2rem;
-  }
-}
-.wrapper > div:nth-child(1):last-child{
-  margin-bottom: 0;
-}
-.wrapper > div:nth-child(1) > *{
+.header > *{
   position: absolute;
   top: 50%;
   right: auto;
@@ -52,94 +35,54 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.wrapper > div:nth-child(2) {
-  width: 100%;
-  height: calc(99.99% * 6/12 - (30px - 30px * 6/12));
-  margin-bottom: 30px;
-  background-color: #808080;
+#svglogo {
+  width: 400px;
+  height: auto;
 }
-.wrapper > div:nth-child(2):last-child{
-  margin-bottom: 0;
-}
-.wrapper > div:nth-child(3) {
-  width: 100%;
-  height: calc(99.99% * 3/12 - (30px - 30px * 3/12));
-  margin-bottom: 30px;
-  background-color: #fff;
-}
-.wrapper > div:nth-child(3):last-child{
-  margin-bottom: 0;
+@media only screen and (max-width: 600px) {
+  #svglogo {
+    width: 80%;
+  }
 }
 .main {
-  *zoom: 1;
-}
-.main:before{
-  content: '';
-  display: table;
-}
-.main:after{
-  content: '';
-  display: table;
-  clear: both;
-}
-.main > div {
-  background-color: #fff;
-  position: relative;
+  max-width: 100vh;
+  padding: 10%;
   text-align: center;
 }
-.main > div > *{
-  position: absolute;
-  top: 50%;
-  right: auto;
-  bottom: auto;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.textContainer {
+  height: 175px;
 }
-.main > div:nth-child(1) {
-  width: 100%;
-  height: calc(99.999999% * 3/7);
-  margin-bottom: 0;
-  font-size: calc(1.5rem + 0.5 * ((100vw - 26.25rem) / 53.75));
+@media only screen and (min-width: 900px) {
+  .textContainer {
+    height: 250px;
+  }
+}
+.quoteTextBox {
+  font-size: calc(1rem + 1 * ((100vw - 26.25rem) / 53.75));
 }
 @media screen and (min-width: 1280px){
-  .main > div:nth-child(1){
+  .quoteTextBox{
     font-size: 2rem;
   }
 }
 @media screen and (max-width: 420px){
-  .main > div:nth-child(1){
-    font-size: 1.5rem;
+  .quoteTextBox{
+    font-size: 1rem;
   }
 }
-.main > div:nth-child(1):last-child{
-  margin-bottom: 0;
-}
-.main > div:nth-child(2) {
-  width: 100%;
-  height: calc(99.999999% * 1/7);
-  margin-bottom: 0;
-  font-size: calc(1.5rem + 0.5 * ((100vw - 26.25rem) / 53.75));
+.quoteAuthorBox {
+  padding-top: 2rem;
+  font-size: calc(1rem + 0.5 * ((100vw - 26.25rem) / 53.75));
 }
 @media screen and (min-width: 1280px){
-  .main > div:nth-child(2){
-    font-size: 2rem;
+  .quoteAuthorBox{
+    font-size: 1.5rem;
   }
 }
 @media screen and (max-width: 420px){
-  .main > div:nth-child(2){
-    font-size: 1.5rem;
+  .quoteAuthorBox{
+    font-size: 1rem;
   }
-}
-.main > div:nth-child(2):last-child{
-  margin-bottom: 0;
-}
-.main > div:nth-child(3) {
-  width: 100%;
-  height: calc(99.999999% * 3/7);
-  margin-bottom: 0;
-}
-.main > div:nth-child(3):last-child{
-  margin-bottom: 0;
 }
 #quoteText,
 #quoteAuthor {
@@ -156,17 +99,32 @@ p {
   border: 3px solid #0092ff;
   background-color: #fff;
   color: #0092ff;
-  font-size: calc(1.5rem + 0.5 * ((100vw - 26.25rem) / 53.75));
+  font-size: calc(1rem + 0.5 * ((100vw - 26.25rem) / 53.75));
 }
 @media screen and (min-width: 1280px){
   #newQuoteButton{
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 @media screen and (max-width: 420px){
   #newQuoteButton{
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
+}
+@media only screen and (max-width: 600px) {
+  #newQuoteButton {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+  }
+}
+.buttonColChange {
+  -webkit-animation-name: changeColor;
+          animation-name: changeColor;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 @-webkit-keyframes fader {
   from {
@@ -182,5 +140,33 @@ p {
   }
   to {
     opacity: 1;
+  }
+}
+@-webkit-keyframes changeColor {
+  0% {
+    border: 3px solid #0092ff;
+    color: #0092ff;
+  }
+  50% {
+    border: 3px solid #ff6d00;
+    color: #ff6d00;
+  }
+  100% {
+    border: 3px solid #0092ff;
+    color: #0092ff;
+  }
+}
+@keyframes changeColor {
+  0% {
+    border: 3px solid #0092ff;
+    color: #0092ff;
+  }
+  50% {
+    border: 3px solid #ff6d00;
+    color: #ff6d00;
+  }
+  100% {
+    border: 3px solid #0092ff;
+    color: #0092ff;
   }
 }
