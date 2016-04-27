@@ -5,6 +5,7 @@ mainCol = white
 textCol = #0092ff
 buttonCol = white
 buttonText = #0092ff
+orangeCol = #FF6D00
 
 *
   padding 0
@@ -56,7 +57,7 @@ body
 @keyframes fader {
     0% {opacity: 0}
     50% {opacity: 0.5}
-    100% {opacity: 1}  
+    100% {opacity: 1}
 }
 
 #newQuoteButton
@@ -73,14 +74,26 @@ body
     height 60px
     border-radius: 30px
 
+#newQuoteButton:hover
+  cursor pointer
+
 .buttonColChange
   animation-name: changeColor
   animation-duration: 2s
   animation-iteration-count: 1
   animation-timing-function: linear;
 
+.twitterButton
+  margin-top 5rem
+
+.twitter-share-button
+  color: buttonText
+
+.twitter-share-button:hover
+  color: orangeCol
+
 @keyframes changeColor {
   0% {border 3px solid buttonText; color: buttonText}
-  50% {border 3px solid #FF6D00; color: #FF6D00}
+  50% {border 3px solid orangeCol; color: orangeCol}
   100% {border 3px solid buttonText; color: buttonText}
 }

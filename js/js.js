@@ -3,6 +3,7 @@ $(document).ready(function(){
   var quoteAuthor = document.getElementById('quoteAuthor');
   var quoteText = document.getElementById('quoteText');
   var changeQuoteButton = document.getElementById('newQuoteButton');
+  var twitterButton = document.querySelector('.twitter-share-button');
 
 // gets quote from provider api via ajax
 
@@ -18,6 +19,7 @@ $(document).ready(function(){
                   if (newQuote.quoteText.length > 139){
                     getQuote();
                   } else {
+                  twitterButton.href = "https://twitter.com/intent/tweet?text=" + newQuote.quoteText;
                   quoteText.style.WebkitAnimationName = "fader";
                   quoteAuthor.style.WebkitAnimationName = "fader";
                   quoteText.innerHTML = newQuote.quoteText;

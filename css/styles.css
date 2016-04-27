@@ -120,6 +120,9 @@ body {
     border-radius: 30px;
   }
 }
+#newQuoteButton:hover {
+  cursor: pointer;
+}
 .buttonColChange {
   -webkit-animation-name: changeColor;
           animation-name: changeColor;
@@ -129,6 +132,15 @@ body {
           animation-iteration-count: 1;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
+}
+.twitterButton {
+  margin-top: 5rem;
+}
+.twitter-share-button {
+  color: #0092ff;
+}
+.twitter-share-button:hover {
+  color: #ff6d00;
 }
 @-webkit-keyframes fader {
   0% {
