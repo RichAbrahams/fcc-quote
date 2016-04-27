@@ -4,6 +4,8 @@ $(document).ready(function(){
   var quoteText = document.getElementById('quoteText');
   var changeQuoteButton = document.getElementById('newQuoteButton');
 
+// gets quote from provider api via ajax
+
   function getQuote() {
     $.ajax({
               url: 'http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp',
@@ -28,6 +30,8 @@ $(document).ready(function(){
             }
       });
   }
+
+// change quote button controller
 
 changeQuoteButton.addEventListener('click', function(){
   $(changeQuoteButton).toggleClass("buttonColChange");
